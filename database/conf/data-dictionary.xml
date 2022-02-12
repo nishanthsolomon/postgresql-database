@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data-dictionary name="">
+
+    <table name="">
+
+        <columns>
+
+            <column name="_ID">
+                <data-type>SERIAL</data-type>
+                <constraints>PRIMARY KEY</constraints>
+            </column>
+
+            <column name="">
+                <data-type>DATE</data-type>
+                <constraints>NOT NULL</constraints>
+            </column>
+
+            <column name="">
+                <data-type>VARCHAR(255)</data-type>
+                <constraints>NOT NULL</constraints>
+            </column>
+
+            <column name="">
+                <data-type>TEXT []</data-type>
+                <constraints>NOT NULL</constraints>
+            </column>
+
+            <column name="COL_1">
+                <data-type>MONEY</data-type>
+                <constraints>NOT NULL CHECK (COL_1 > 0.00::MONEY)</constraints>
+            </column>
+
+            <column name="COL_2">
+                <data-type>SMALLINT</data-type>
+                <constraints>NOT NULL</constraints>
+            </column>
+
+            <column name="">
+                <data-type>MONEY</data-type>
+                <constraints>GENERATED ALWAYS AS (COL_1 / COL_2) STORED</constraints>
+            </column>
+
+        </columns>
+
+    </table>
+
+</data-dictionary>
